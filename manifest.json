@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "GAS Quota Meter",
+  "version": "1.0.0",
+  "description": "Google Apps Script の割り当て（Quota）と直近24時間の使用量を表示します。",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["identity", "storage"],
+  "host_permissions": ["https://script.googleapis.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    },
+    "default_title": "GAS Quota Meter"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://script.google.com/*"],
+      "js": ["quotas.js", "ui.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "oauth2": {
+    "client_id": "770924996680-s2h8f6aapaeotuivni1ihh1cjr4d0rp1.apps.googleusercontent.com",
+    "scopes": ["https://www.googleapis.com/auth/script.processes"]
+  }
+}
