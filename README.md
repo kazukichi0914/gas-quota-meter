@@ -1,3 +1,5 @@
+<img width="500" height="744" alt="スクリーンショット 2026-11-05 150753" src="https://github.com/user-attachments/assets/b315a747-26d8-4709-b3f4-92d98079dc80" />
+
 # ⏱ GAS Quota Meter
 
 ![Chrome](https://img.shields.io/badge/Chrome-Extension-4285F4?logo=googlechrome&logoColor=white)
